@@ -1,0 +1,5 @@
+name=input("Enter your first name:")
+adress=input("Enter your address:")
+Birthdate=input("Enter your birthdate")
+telephonenumber=input("enter your phone number:")
+age=input("Enter your age:")
